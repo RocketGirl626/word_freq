@@ -8,5 +8,7 @@ describe('the word freq path', {:type => :feature}) do
     visit('/')
     fill_in('word', :with => 'cool')
     fill_in('phrase', :with => 'cool cool kitty in the cool cool city')
+    click_button('Send')
+    expect(page).to have_content('Your word cool, appears 4 times.')
   end
 end

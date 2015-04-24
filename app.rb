@@ -2,12 +2,16 @@ require('sinatra')
 require('sinatra/reloader')
 require('./lib/word_freq')
 also_reload('./lib/**/*.rb')
+require('pry')
 
 get('/') do
   erb(:index)
 end
 
 get('/result') do
-  @result = params.fetch('result').word_freq()
+  user_input = params.fetch('result')
+  return_value = user_input.to_i
+  @result = return_value.word_freq()
   erb(:result)
+binding.pry
 end

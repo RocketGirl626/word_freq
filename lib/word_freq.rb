@@ -10,6 +10,8 @@ class String
         count = count.+(1)
       end
     end
-    count
+
+    "Your word #{word}, appears #{count} times."
+
   end
 end
