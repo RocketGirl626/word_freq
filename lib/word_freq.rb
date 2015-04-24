@@ -6,7 +6,7 @@ class String
     count = 0
 
     phrase.each() do |element|
-      if word == element
+      if word.downcase() == element.downcase()
         count = count.+(1)
       end
     end

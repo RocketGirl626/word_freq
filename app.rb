@@ -10,8 +10,9 @@ end
 
 get('/result') do
   user_input = params.fetch('result')
+puts(user_input)
   return_value = user_input.to_i
   @result = return_value.word_freq()
   erb(:result)
-binding.pry
+
 end
